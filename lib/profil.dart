@@ -1,3 +1,4 @@
+import 'package:amytest/games.dart';
 import 'package:amytest/widget.dart';
 import 'package:flutter/material.dart';
 import 'homescreen.dart';
@@ -14,10 +15,40 @@ class _ProfilScreenState extends State<ProfilScreen> {
       appBar: customAppBar("Dein Profil"),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Wähle dein nächstes Spiel aus!"),
-            listViewGames(),
+            ElevatedButton(
+                onPressed:(){
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                 );
+                 },
+                child: const Text("Spielauswahl"),
+            ),
+            ElevatedButton(
+              onPressed:(){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Meine Organisation"),
+            ),
+            ElevatedButton(
+              onPressed:(){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Spielauswahl"),
+            ),
+            ElevatedButton(
+              onPressed:(){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Spielauswahl"),
+            ),
           ],
         ),
       ),

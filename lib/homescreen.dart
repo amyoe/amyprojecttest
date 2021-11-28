@@ -3,6 +3,7 @@ import 'package:amytest/settings.dart';
 import 'package:amytest/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:amytest/games.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
