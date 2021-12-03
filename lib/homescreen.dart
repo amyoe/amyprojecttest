@@ -12,15 +12,47 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: customAppBar("Willkommen"),
-      body:Container(
+      body: Center(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             MyStatefulWidget(),
-            Text("Wähle dein nächstes Spiel aus!"),
-            listViewGames(),
-            listViewGames(),
-            listViewGames(),
-            listViewGames(),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Spielauswahl"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Meine Organisation"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Spielauswahl"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GamesChoice()),
+                );
+              },
+              child: const Text("Spielauswahl"),
+            ),
           ],
         ),
       ),
@@ -44,21 +76,35 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         IconButton(
-          icon: const Icon(FontAwesomeIcons.cog, size: 40, color: Colors.blueGrey,),
+          icon: const Icon(
+            FontAwesomeIcons.cog,
+            size: 40,
+            color: Colors.blueGrey,
+          ),
           onPressed: () {
-            Navigator.push(context,
+            Navigator.push(
+              context,
               MaterialPageRoute(builder: (context) => const Settings()),
             );
           },
         ),
-        const Text('Hallo User!',
-        style: TextStyle(fontFamily: 'Hind'),
+        const Text(
+          'Hallo User!',
+          style: TextStyle(
+            fontFamily: "Roboto",
+            fontSize: 20,
+          ),
         ),
         IconButton(
-          icon: const Icon(FontAwesomeIcons.user, size: 40, color: Colors.blueGrey,),
+          icon: const Icon(
+            FontAwesomeIcons.user,
+            size: 40,
+            color: Colors.blueGrey,
+          ),
           onPressed: () {
-            Navigator.push(context,
-              MaterialPageRoute(builder: (context) =>  ProfilScreen()),
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfilScreen()),
             );
           },
         ),
@@ -66,6 +112,3 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     );
   }
 }
-
-
-

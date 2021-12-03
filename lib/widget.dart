@@ -13,7 +13,6 @@ PreferredSizeWidget customAppBar(String title) {
 }
 
 // Global ausgelagert die Antwortkarten
-
 Widget answerCard(String text){
   return Container(
     height: 60,
@@ -27,7 +26,14 @@ Widget answerCard(String text){
   );
 }
 
+
+
+
+
+
+// UNBENUTZT bisher
 // Menu sollte ausgelagert sein für einheitliche Anpassungen
+//War am Anfang für den HomeScreen gedacht, derzeit nicht in benutzung
 Widget listViewGames() {
   return Container(
     height: 80,

@@ -12,18 +12,29 @@ class _ProfilScreenState extends State<ProfilScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBar("Dein Profil"),
+      appBar: customAppBar("Dein Benutzerprofil"),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            ElevatedButton(
-                onPressed:(){
-                  Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const GamesChoice()),
-                 );
-                 },
-                child: const Text("Spielauswahl"),
+            const Text(
+              'Dein Profil',
+              style: TextStyle(
+                fontFamily: "Roboto",
+                fontSize: 20,
+              ),
+            ),
+            Image.asset('assets/images/teamwork.png',
+              width: 100,
+              height: 100,
+            ),
+            const ElevatedButton(
+                onPressed:null,
+                child: Text("Benutzername"),
+            ),
+            const ElevatedButton(
+              onPressed:null,
+              child: Text("Organisationsposition"),
             ),
             ElevatedButton(
               onPressed:(){
@@ -31,7 +42,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                   MaterialPageRoute(builder: (context) => const GamesChoice()),
                 );
               },
-              child: const Text("Meine Organisation"),
+              child: const Text("Kollegen einladen"),
             ),
             ElevatedButton(
               onPressed:(){
@@ -39,15 +50,7 @@ class _ProfilScreenState extends State<ProfilScreen> {
                   MaterialPageRoute(builder: (context) => const GamesChoice()),
                 );
               },
-              child: const Text("Spielauswahl"),
-            ),
-            ElevatedButton(
-              onPressed:(){
-                Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const GamesChoice()),
-                );
-              },
-              child: const Text("Spielauswahl"),
+              child: const Text("Statistik"),
             ),
           ],
         ),

@@ -17,21 +17,33 @@ class _GamesChoiceSate extends State<GamesChoice> {
     return Scaffold(
       appBar: customAppBar("Spiele"),
       body: Container(
-        height: 80,
-        width: 250,
-        child: Card(
+        child: Center(
           child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: ElevatedButton(
-              onPressed: (){
-              Navigator.push(context,
-                MaterialPageRoute(builder: (context)=> const QuizDuell()),
-              );
-            },
-                child: Text("Quizduell"),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.white12,
-              ),
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    onPressed: (){
+                      Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const QuizDuell()),
+                      );
+                    },
+                    child: Text("QuizDuell"),
+                ),
+                const ElevatedButton(
+                  onPressed: null,
+                  child: Text("Memorie"),
+                ),
+                const ElevatedButton(
+                  onPressed: null,
+                  child: Text("Activity"),
+                ),
+                const ElevatedButton(
+                  onPressed: null,
+                  child: Text("Stadt-Land-Fluss"),
+                ),
+              ],
             ),
           ),
         ),
